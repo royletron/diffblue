@@ -97,6 +97,6 @@ app.use(function(err, req, res, next) {
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/diffblue')
 
 // listen for requests :)
-listener = app.listen(process.env.PORT, function () {
+listener = app.listen(process.env.PORT || 3000, function () {
   console.log('Your app is listening on port ' + listener.address().port);
 });
