@@ -1,7 +1,3 @@
-// server.js
-// where your node app starts
-
-// init project
 var express = require('express');
 var bodyParser = require('body-parser');
 var app = express();
@@ -16,7 +12,7 @@ var rimraf = require('rimraf');
 
 function cleanUp(directory) {
   rimraf(directory, {}, function() {
-    console.log('begone '+directory);
+    console.log('directory '+directory+' removed');
   })
 }
 
